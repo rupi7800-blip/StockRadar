@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { background: #0b0d10; color: #e7eaee; }
+body { -webkit-font-smoothing: antialiased; font-feature-settings: 'tnum' 1; }
+a { color: inherit; }
+.card { @apply rounded-xl border border-line bg-panel; }
+.card-h { @apply flex flex-wrap items-center justify-between gap-2 border-b border-line px-4 py-3 text-sm font-semibold tracking-wide; }
+.chip { @apply inline-flex items-center gap-1 rounded-md border px-1.5 py-0.5 text-[11px] font-medium leading-none; }
+.btn { @apply inline-flex items-center justify-center gap-1.5 rounded-lg border border-line bg-panel2 px-3 py-1.5 text-sm hover:border-accent/60 hover:text-white disabled:opacity-50 transition-colors; }
+.btn-primary { @apply border-accent/60 bg-accent/15 text-accent hover:bg-accent/25; }
+.input { @apply w-full rounded-lg border border-line bg-bg px-3 py-2 text-sm outline-none focus:border-accent/70; }
+.tbl { @apply w-full text-sm; }
+.tbl th { @apply px-3 py-2 text-left text-[11px] font-semibold uppercase tracking-wider text-mute; }
+.tbl td { @apply border-t border-line px-3 py-2 align-middle; }
+.up { color: #22c55e; } .down { color: #ef4444; }
+.scroll-x { overflow-x: auto; scrollbar-width: none; } .scroll-x::-webkit-scrollbar { display: none; }
+.ticker-track { animation: marquee var(--dur, 90s) linear infinite; }
+.ticker-paused .ticker-track { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation-duration: 400s; } }
+/* modalità lingua: "it" mostra la traduzione italiana, "orig" il testo originale */
+.t-orig { display: none; }
+html[data-mode='orig'] .t-it { display: none; }
+html[data-mode='orig'] .t-orig { display: inline; }
+.pulse-dot { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .35 } }
+details > summary { list-style: none; cursor: pointer; } details > summary::-webkit-details-marker { display: none; }

@@ -1,0 +1,22 @@
+{
+  "name": "Stock Radar — Le borse del mondo, sotto controllo",
+  "short_name": "Stock Radar",
+  "description": "Borse mondiali e Piazza Affari: indici, titoli, settori, trimestrali e notizie tradotte e verificate, in italiano.",
+  "lang": "it",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "shortcuts": [
+    { "name": "Mercati", "url": "/mercati" },
+    { "name": "Piazza Affari", "url": "/italia" },
+    { "name": "Watchlist", "url": "/watchlist" }
+  ]
+}
